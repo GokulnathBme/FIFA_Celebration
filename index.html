@@ -1,555 +1,207 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-
+  <head>
+    <meta charset="UTF-8" />
     <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#06111f" />
     <meta
-        name="description"
-        content="A special digital caricature created to celebrate an unforgettable FIFA celebration."
-    >
-
-    <meta
-        name="theme-color"
-        content="#061525"
-    >
-
-    <title>Your Moment. Your Character. Your Celebration.</title>
-
-    <!-- Premium typography -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <!-- Atmospheric background -->
-    <div class="site-background" aria-hidden="true">
-        <div class="stadium-glow stadium-glow--one"></div>
-        <div class="stadium-glow stadium-glow--two"></div>
-        <div class="pitch-lines"></div>
-        <div class="grain"></div>
-    </div>
-
-    <!-- Header -->
-    <header class="site-header">
+      name="description"
+      content="A special football celebration experience."
+    />
+    <title>FIFA CELEBRATION</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="site-header">
         <div class="header-inner">
-
-            <a
-                href="#"
-                class="brand"
-                id="brandHome"
-                aria-label="Return to welcome screen"
-            >
-                <span class="brand-mark">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-
-                <span class="brand-text">
-                    FIFA CELEBRATION
-                </span>
-            </a>
-
-            <div class="header-status">
-                <span class="status-dot"></span>
-                <span>PERSONAL EDITION</span>
-            </div>
-
+          <a href="#" class="brand" aria-label="Home">
+            <span class="brand-mark"> ⚽ </span>
+            <span class="brand-text"> FIFA CELEBRATION </span>
+          </a>
         </div>
-    </header>
+      </header>
 
-
-    <!-- Main application -->
-    <main id="app">
-
-        <!-- =========================================
-             WELCOME SCREEN
-        ========================================== -->
-        <section
-            id="welcomeScreen"
-            class="screen screen--welcome is-active"
-            aria-labelledby="welcomeTitle"
-        >
-
-            <div class="welcome-layout">
-
-                <!-- Left editorial information -->
-                <div class="welcome-copy">
-
-                    <p class="eyebrow">
-                        <span class="eyebrow-line"></span>
-                        <span id="welcomeEyebrow">
-                            A SPECIAL GIFT FROM THE CELEBRATION
-                        </span>
-                    </p>
-
-                    <h1
-                        id="welcomeTitle"
-                        class="hero-title"
-                    >
-                        YOUR MOMENT.
-                        <br>
-
-                        <span>YOUR CHARACTER.</span>
-                        <br>
-
-                        YOUR CELEBRATION.
-                    </h1>
-
-                    <p
-                        id="welcomeMessage"
-                        class="hero-description"
-                    >
-                        Thank you for making our FIFA celebration unforgettable.
-                        You brought the energy, the spirit, and the confidence
-                        that made the event special.
-                    </p>
-
-                    <div class="hero-meta">
-                        <div class="meta-item">
-                            <span class="meta-number">01</span>
-                            <span class="meta-label">FIND YOUR<br>EDITION</span>
-                        </div>
-
-                        <div class="meta-divider"></div>
-
-                        <div class="meta-item">
-                            <span class="meta-number">02</span>
-                            <span class="meta-label">MAKE IT<br>YOURS</span>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <!-- Right lookup panel -->
-                <div class="lookup-area">
-
-                    <div class="lookup-card">
-
-                        <div class="card-topline">
-                            <span>PERSONAL CARICATURE ACCESS</span>
-                            <span class="card-index">01 / 03</span>
-                        </div>
-
-                        <div class="lookup-card-content">
-
-                            <h2>
-                                Your caricature
-                                <br>
-                                is ready.
-                            </h2>
-
-                            <p class="lookup-instruction">
-                                Enter your zifo email address
-                                to find your personal edition.
-                            </p>
-
-                            <form
-                                id="lookupForm"
-                                class="lookup-form"
-                                novalidate
-                            >
-
-                                <div class="input-wrapper">
-
-                                    <label
-                                        for="emailInput"
-                                        class="visually-hidden"
-                                    >
-                                        Enter your email address
-                                    </label>
-
-                                    <span
-                                        class="input-prefix"
-                                        aria-hidden="true"
-                                    >
-                                        @
-                                    </span>
-
-                                    <input
-                                        type="email"
-                                        id="emailInput"
-                                        name="email"
-                                        placeholder="your@email.com"
-                                        autocomplete="email"
-                                        autocapitalize="none"
-                                        spellcheck="false"
-                                        required
-                                    >
-
-                                </div>
-
-                                <button
-                                    type="submit"
-                                    id="claimButton"
-                                    class="button button--primary"
-                                >
-                                    <span class="button-label">
-                                        CLAIM MY CARICATURE
-                                    </span>
-
-                                    <span
-                                        class="button-loader"
-                                        aria-hidden="true"
-                                    >
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </span>
-
-                                    <span
-                                        class="button-arrow"
-                                        aria-hidden="true"
-                                    >
-                                        ↗
-                                    </span>
-                                </button>
-
-                            </form>
-
-
-                            <!-- Error state -->
-                            <div
-                                id="errorMessage"
-                                class="message-box message-box--error"
-                                role="alert"
-                                aria-live="polite"
-                                hidden
-                            >
-                                <span class="message-icon">!</span>
-
-                                <div>
-                                    <strong id="errorTitle">
-                                        WE COULDN'T FIND THAT CARICATURE
-                                    </strong>
-
-                                    <p id="errorText">
-                                        Please check the email address and try again.
-                                    </p>
-                                </div>
-                            </div>
-
-
-                            <p class="privacy-note">
-                                Your caricature is waiting.
-                                <span>Nothing else required.</span>
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="lookup-footer">
-                        <span>EVENT ARCHIVE</span>
-                        <span class="lookup-footer-line"></span>
-                        <span>2026</span>
-                    </div>
-
-                </div>
-
+      <main id="welcomeScreen" class="screen screen--welcome">
+        <div class="welcome-layout">
+          <section class="welcome-copy">
+            <p class="hero-eyebrow">A SPECIAL CELEBRATION MOMENT</p>
+            <h1 class="hero-title">
+              One more game day.<br /><span>One more memory.</span>
+            </h1>
+            <p class="hero-description">
+              Some moments deserve to be replayed. Enter your zifo email to
+              unlock your personal caricature.
+            </p>
+            <div class="hero-meta">
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">EXPERIENCE</span
+                ><span class="hero-meta-value">Personalised</span>
+              </div>
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">FORMAT</span
+                ><span class="hero-meta-value">Digital caricature</span>
+              </div>
             </div>
+          </section>
 
-        </section>
-
-
-        <!-- =========================================
-             REVEAL SCREEN
-        ========================================== -->
-        <section
-            id="revealScreen"
-            class="screen screen--reveal"
-            aria-labelledby="revealTitle"
-            hidden
-        >
-
-            <div class="reveal-layout">
-
-                <div class="reveal-header">
-
-                    <p class="eyebrow">
-                        <span class="eyebrow-line"></span>
-                        PERSONAL EDITION FOUND
-                    </p>
-
-                    <div class="reveal-heading-row">
-
-                        <div>
-                            <h2
-                                id="revealTitle"
-                                class="reveal-title"
-                            >
-                                THIS ONE'S
-                                <span>YOURS.</span>
-                            </h2>
-
-                            <p class="reveal-description">
-                                A little piece of the celebration,
-                                created just for you.
-                            </p>
-                        </div>
-
-                        <div class="reveal-number">
-                            <span>EDITION</span>
-                            <strong>01</strong>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Image stage -->
-                <div class="image-stage">
-
-                    <div class="image-stage-decoration image-stage-decoration--top">
-                        PERSONAL ARCHIVE / 2026
-                    </div>
-
-                    <div class="image-frame">
-
-                        <div class="image-frame-corner image-frame-corner--tl"></div>
-                        <div class="image-frame-corner image-frame-corner--tr"></div>
-                        <div class="image-frame-corner image-frame-corner--bl"></div>
-                        <div class="image-frame-corner image-frame-corner--br"></div>
-
-                        <div class="image-loading-state">
-                            <div class="loading-ring"></div>
-                            <span>REVEALING YOUR EDITION</span>
-                        </div>
-
-                        <img
-                            id="caricatureImage"
-                            class="caricature-image"
-                            src=""
-                            alt="Your personal celebration caricature"
-                        >
-
-                    </div>
-
-                    <div class="image-stage-decoration image-stage-decoration--bottom">
-                        <span id="imageEmailLabel"></span>
-                        <span>AUTHENTICATED</span>
-                    </div>
-
-                </div>
-
-
-                <!-- Actions -->
-                <div class="reveal-actions">
-
-                    <button
-                        type="button"
-                        id="downloadButton"
-                        class="button button--primary button--download"
-                    >
-                        <span class="button-label">
-                            DOWNLOAD MY CARICATURE
-                        </span>
-
-                        <span
-                            class="button-arrow"
-                            aria-hidden="true"
-                        >
-                            ↓
-                        </span>
-                    </button>
-
-                    <button
-                        type="button"
-                        id="closeRevealButton"
-                        class="button button--secondary"
-                    >
-                        CLOSE
-                    </button>
-
-                    <button
-                        type="button"
-                        id="downloadMoreButton"
-                        class="button button--text"
-                    >
-                        <span>
-                            I WANT TO SEE SOMEONE ELSE'S
-                        </span>
-
-                        <span aria-hidden="true">
-                            →
-                        </span>
-                    </button>
-
-                </div>
-
-                <!-- Download feedback -->
-                <div
-                    id="downloadFeedback"
-                    class="download-feedback"
-                    role="status"
-                    aria-live="polite"
-                    hidden
-                >
-                    <span class="feedback-check">✓</span>
-                    <span>YOUR CARICATURE HAS BEEN DOWNLOADED</span>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             INTERVENTION SCREEN
-        ========================================== -->
-        <section
-            id="interventionScreen"
-            class="screen screen--intervention"
-            aria-labelledby="interventionTitle"
-            hidden
-        >
-
-            <div class="intervention-layout">
-
-                <div class="intervention-marker">
-                    <span class="marker-line"></span>
-                    <span>UNAUTHORIZED CURIOSITY DETECTED</span>
-                    <span class="marker-line"></span>
-                </div>
-
-
-                <div class="intervention-card">
-
-                    <div class="intervention-card-top">
-                        <span>CAPTAIN'S NOTICE</span>
-                        <span>02 / 03</span>
-                    </div>
-
-                    <div class="intervention-icon" aria-hidden="true">
-                        <div class="eye">
-                            <div class="eye-pupil"></div>
-                        </div>
-                    </div>
-
-                    <p class="eyebrow intervention-eyebrow">
-                        HOLD ON A SECOND
-                    </p>
-
-                    <h2
-                        id="interventionTitle"
-                        class="intervention-title"
-                    >
-                        SERIOUSLY?
-                    </h2>
-
-                    <p class="intervention-description">
-                        This is a captain's moment,
-                        <br>
-                        not a team huddle.
-                    </p>
-
-                    <div class="intervention-actions">
-
-                        <button
-                            type="button"
-                            id="reallyCloseButton"
-                            class="button button--secondary button--full"
-                        >
-                            CLOSE. REALLY NOW.
-                        </button>
-
-                        <button
-                            type="button"
-                            id="proceedButton"
-                            class="button button--primary button--full"
-                        >
-                            PROCEED TO DOWNLOAD SOMEONE ELSE'S
-                            <span aria-hidden="true">→</span>
-                        </button>
-
-                    </div>
-
-                </div>
-
-
-                <div class="intervention-footer">
-                    <span>WE SAW THAT</span>
-                    <span class="intervention-footer-dot"></span>
-                    <span>NO JUDGEMENT</span>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             THANK YOU SCREEN
-        ========================================== -->
-        <section
-            id="thankYouScreen"
-            class="screen screen--thank-you"
-            aria-labelledby="thankYouTitle"
-            hidden
-        >
-
-            <div class="thank-you-layout">
-
-                <div class="thank-you-symbol">
-                    <span>✦</span>
-                </div>
-
-                <p class="eyebrow">
-                    THE FINAL WHISTLE
+          <section class="lookup-area">
+            <div class="lookup-card">
+              <div class="lookup-card-content">
+                <p class="lookup-card-eyebrow">YOUR PERSONAL MOMENT</p>
+                <h2>Find your<br />caricature.</h2>
+                <p class="lookup-instruction">
+                  Enter your zifo email address to reveal your personalised
+                  caricature portrait.
                 </p>
-
-                <h2 id="thankYouTitle">
-                    THANK YOU FOR BEING PART
-                    <span>OF THE CELEBRATION.</span>
-                </h2>
-
-                <p>
-                    The energy, the laughs, the competition,
-                    and the memories made it special.
-                </p>
-
-                <button
-                    type="button"
-                    id="returnHomeButton"
+                <form id="lookupForm" class="lookup-form" novalidate>
+                  <div class="input-group">
+                    <label for="emailInput" class="input-label"
+                      >EMAIL ADDRESS</label
+                    >
+                    <div class="input-wrapper">
+                      <input
+                        type="email"
+                        id="emailInput"
+                        name="email"
+                        placeholder="you@zifornd.com"
+                        autocomplete="email"
+                        spellcheck="false"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    id="lookupButton"
                     class="button button--primary"
-                >
-                    RETURN TO THE CELEBRATION
-                    <span aria-hidden="true">↗</span>
-                </button>
-
+                  >
+                    <span>REVEAL MY MOMENT</span>
+                  </button>
+                  <div id="errorMessage" class="error-message" hidden>
+                    <h3>IMAGE NOT FOUND</h3>
+                    <p>
+                      We couldn't find a caricature associated with that email.
+                      Please check the address and try again.
+                    </p>
+                  </div>
+                </form>
+                <div class="privacy-note">
+                  <span class="privacy-note-icon" aria-hidden="true">🔒</span>
+                  <span
+                    >Don't Worry! Your email is only used to locate your
+                    personalised image.</span
+                  >
+                </div>
+              </div>
             </div>
+          </section>
+        </div>
+      </main>
 
-        </section>
+      <section id="revealScreen" class="screen screen--reveal" hidden>
+        <div class="reveal-container">
+          <p class="reveal-heading">YOUR GAMEDAY MOMENT</p>
+          <h1 class="reveal-title">This one is yours.</h1>
+          <div class="image-container">
+            <div id="imageLoadingState" class="image-loading-state">
+              <span class="image-loading-spinner"></span>
+              <span>LOADING YOUR CARICATURE</span>
+            </div>
+            <img
+              id="caricatureImage"
+              src=""
+              alt="Your personalised football caricature"
+            />
+          </div>
+          <p id="imageEmailLabel" class="image-email-label"></p>
+          <div class="reveal-actions">
+            <button
+              id="downloadButton"
+              class="button button--primary"
+              type="button"
+            >
+              DOWNLOAD THIS IMAGE
+            </button>
+          </div>
+          <p id="downloadFeedback" class="download-feedback" hidden>
+            IMAGE READY
+          </p>
+        </div>
+      </section>
 
-    </main>
+      <section id="thankYouScreen" class="screen screen--thank-you" hidden>
+        <div class="thank-you-container">
+          <div class="thank-you-icon" aria-hidden="true">✓</div>
+          <h1>Thank you.</h1>
+          <p>
+            Thanks for being part of the moment.<br />Some memories deserve one
+            more replay.
+          </p>
+          <div class="thank-you-actions">
+            <button
+              id="closeSiteButton"
+              class="button button--secondary"
+              type="button"
+            >
+              CLOSE SITE
+            </button>
+            <button
+              id="sarcasticViewOthersButton"
+              class="button button--primary"
+              type="button"
+            >
+              DOWNLOAD ANOTHER IMAGE
+            </button>
+          </div>
+        </div>
+      </section>
 
+      <section
+        id="sarcasticConfirmScreen"
+        class="screen screen--intervention"
+        hidden
+      >
+        <div class="intervention-container">
+          <div class="intervention-icon" aria-hidden="true">
+            <img
+              src="images/really.png"
+              alt="Really?"
+              class="sarcastic-image-asset"
+            />
+          </div>
+          <h1>Are you sure?</h1>
+          <p>Do you really want to see another person's caricature?</p>
+          <div class="intervention-actions">
+            <button
+              id="sarcasticCloseButton"
+              class="button button--secondary"
+              type="button"
+            >
+              CLOSE PAGE
+            </button>
+            <button
+              id="sarcasticGoHomeButton"
+              class="button button--primary"
+              type="button"
+            >
+              GO TO HOMEPAGE
+            </button>
+          </div>
+        </div>
+      </section>
 
-    <!-- Toast notification -->
-    <div
+      <div
         id="toast"
         class="toast"
         role="status"
         aria-live="polite"
         hidden
-    ></div>
-
-
-    <script src="script.js"></script>
-
-</body>
+      ></div>
+    </div>
+    <script src="script.js" defer></script>
+  </body>
 </html>
